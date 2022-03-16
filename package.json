@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build/ && react-scripts build && npm run-script sw",
+    "sw": "cat src/sw.js >> build/service-worker.js"
+
   },
   "repository": {
     "type": "git",
